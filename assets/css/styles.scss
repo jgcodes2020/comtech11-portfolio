@@ -1,0 +1,113 @@
+---
+---
+
+// Colours/fonts
+:root {
+  --base-font: Arial, Helvetica, sans-serif;
+  // THESE ARE TEMPORARY!!
+  --base-bg: #DDEEFF;
+  --base-fg: #000000;
+  
+  --btn-base: #BBDDFF;
+  --btn-checked: #AACCEE;
+  --btn-press: #88BBFF;
+}
+body {
+  font-family: var(--base-font);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+// ====================
+// Navbar styles
+// ====================
+nav {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(auto, 2);
+  grid-template-areas: 
+    "brand menu"
+    "links links";
+  padding: 0.5rem 0 0;
+  
+  background-color: var(--base-bg);
+  color: var(--base-fg);
+  
+}
+
+nav > .brand {
+  grid-area: brand;
+  margin-left: 1.5rem;
+  
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+// Fancy CSS hack for a toggle button
+nav > input.nav-toggle {
+  display: none;
+}
+nav > label.nav-toggle {
+  grid-area: menu;
+  
+  margin-right: 0.5rem;
+  padding: 1.0rem;
+  height: fit-content;
+  width: fit-content;
+  
+  background-color: var(--btn-base);
+}
+nav > input:checked + label.nav-toggle {
+  background-color: var(--btn-checked);
+}
+nav > label.nav-toggle:active {
+  background-color: var(--btn-press);
+}
+
+// Primary navbar link styles
+nav > ul.nav-links {
+  grid-area: links;
+  display: flex;
+  flex-direction: column;
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  // common transition properties
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease-in-out;
+}
+nav > ul.nav-links > li {
+  height: 2rem;
+  min-height: 2rem;
+  overflow: hidden;
+}
+nav > ul.nav-links a {
+  display: block;
+  
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem;
+  
+  color: var(--base-fg);
+  text-decoration: none;
+}
+@media noscript {
+  // if JS is disabled, the hamburger menu won't work properly
+  // we'll need to leave it open
+  nav > ul.nav-links {
+    height: initial;
+  }
+}
+
+main {
+  color: cornflowerblue;
+  padding: 1.5rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  @import "styles-desktop.css";
+}

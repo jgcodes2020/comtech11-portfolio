@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--Scripts + dependencies-->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script type="module" src="/assets/js/navbar.js" defer></script>
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <header>
+      <!-- Custom navbar (no Bootstrap, because I want something different) -->
+        <nav>
+          <div class="brand">E</div>
+          <!-- sick CSS hack -->
+          <input class="nav-toggle" type="checkbox" id="nav-toggle">
+          <label class="nav-toggle" for="nav-toggle" class="hamburger">&#9776;</label>
+          <ul class="nav-links">
+            <!-- Actual links -->
+            <li><a href="/">one page</a></li>
+            <li><a href="/">two page</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>{{ content }}</main>
+  </body>
+
+</html>
