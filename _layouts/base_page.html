@@ -20,8 +20,9 @@
           <label class="nav-toggle" for="nav-toggle" class="hamburger">&#9776;</label>
           <ul class="nav-links">
             <!-- Actual links -->
-            <li><a href="/">one page</a></li>
-            <li><a href="/">two page</a></li>
+            {% for i in site.data.nav %}
+              <li><a href="{{i.link}}">{{i.name}}</a></li>
+            {% endfor %}
           </ul>
         </nav>
       </header>

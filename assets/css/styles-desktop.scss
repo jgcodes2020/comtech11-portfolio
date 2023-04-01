@@ -1,0 +1,23 @@
+---
+---
+// THIS FILE CONTAINS CSS RULES SPECIFIC TO LARGER SCREENS.
+// ========================================================
+
+nav {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "brand links"
+}
+
+nav > .nav-toggle {
+  display: none;
+}
+
+nav > ul.nav-links {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  
+  height: initial;
+}

@@ -1,6 +1,5 @@
 ---
 ---
-
 // Colours/fonts
 :root {
   --base-font: Arial, Helvetica, sans-serif;
@@ -38,6 +37,7 @@ nav {
 nav > .brand {
   grid-area: brand;
   margin-left: 1.5rem;
+  min-width: 5rem;
   
   font-size: 2.5rem;
   font-weight: 800;
@@ -105,9 +105,4 @@ nav > ul.nav-links a {
 main {
   color: cornflowerblue;
   padding: 1.5rem;
-}
-
-
-@media screen and (min-width: 768px) {
-  @import "styles-desktop.css";
 }
