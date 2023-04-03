@@ -1,4 +1,10 @@
 - name: Home
   link: /
-- name: Projects
+- name: Things I've Made
+  link: /past.html
+- name: My Inspiration
+  link: /inspiration.html
+- name: Plans for University
+  link: /university.html
+- name: My Projects
   link: /projects.html

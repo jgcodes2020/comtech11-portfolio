@@ -4,12 +4,13 @@
 :root {
   --base-font: Arial, Helvetica, sans-serif;
   // THESE ARE TEMPORARY!!
-  --base-bg: #DDEEFF;
-  --base-fg: #000000;
+  --nav-bg: #8eeeff;
+  --nav-fg: #000000;
+  --nav-fg2: #555555;
   
-  --btn-base: #BBDDFF;
-  --btn-checked: #AACCEE;
-  --btn-press: #88BBFF;
+  --nav-btn-base: #7fd2e0;
+  --nav-btn-checked: #6fb7c4;
+  --nav-btn-press: #558d97;
 }
 body {
   font-family: var(--base-font);
@@ -27,10 +28,10 @@ nav {
   grid-template-areas: 
     "brand menu"
     "links links";
-  padding: 0.5rem 0 0;
+  padding: 0.5rem 0 0.5rem;
   
-  background-color: var(--base-bg);
-  color: var(--base-fg);
+  background-color: var(--nav-bg);
+  color: var(--nav-fg);
   
 }
 
@@ -55,13 +56,13 @@ nav > label.nav-toggle {
   height: fit-content;
   width: fit-content;
   
-  background-color: var(--btn-base);
+  background-color: var(--nav-btn-base);
 }
 nav > input:checked + label.nav-toggle {
-  background-color: var(--btn-checked);
+  background-color: var(--nav-btn-checked);
 }
 nav > label.nav-toggle:active {
-  background-color: var(--btn-press);
+  background-color: var(--nav-btn-press);
 }
 
 // Primary navbar link styles
@@ -91,8 +92,12 @@ nav > ul.nav-links a {
   height: 100%;
   padding: 0.3rem;
   
-  color: var(--base-fg);
+  color: var(--nav-fg2);
   text-decoration: none;
+}
+nav > ul.nav-links a.nav-current {
+  color: var(--nav-fg);
+  font-weight: 700;
 }
 @media noscript {
   // if JS is disabled, the hamburger menu won't work properly

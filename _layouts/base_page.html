@@ -21,7 +21,7 @@
           <ul class="nav-links">
             <!-- Actual links -->
             {% for i in site.data.nav %}
-              <li><a href="{{i.link}}">{{i.name}}</a></li>
+              <li><a href="{{i.link}}" class="{% if page.url == i.link %}nav-current{% endif %}">{{i.name}}</a></li>
             {% endfor %}
           </ul>
         </nav>
