@@ -4,13 +4,13 @@
 :root {
   --base-font: Arial, Helvetica, sans-serif;
   // THESE ARE TEMPORARY!!
-  --nav-bg: #8eeeff;
-  --nav-fg: #000000;
-  --nav-fg2: #555555;
+  --nav-bg: powderblue;
+  --nav-fg: black;
+  --nav-fg2: slategray;
   
-  --nav-btn-base: #7fd2e0;
-  --nav-btn-checked: #6fb7c4;
-  --nav-btn-press: #558d97;
+  --nav-btn-base: turquoise;
+  --nav-btn-checked: mediumturquoise;
+  --nav-btn-press: darkturquoise;
 }
 body {
   font-family: var(--base-font);
@@ -19,7 +19,7 @@ body {
 }
 
 // ====================
-// Navbar styles
+// !*! Navbar styles
 // ====================
 nav {
   display: grid;
@@ -73,12 +73,14 @@ nav > ul.nav-links {
   
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 0.75rem;
   
   // common transition properties
   overflow: hidden;
   height: 0;
   transition: height 0.5s ease-in-out;
+  
+  
 }
 nav > ul.nav-links > li {
   height: 2rem;
@@ -107,7 +109,11 @@ nav > ul.nav-links a.nav-current {
   }
 }
 
+// ====================
+// !*! Content styles
+// ====================
+
 main {
-  color: cornflowerblue;
+  color: navy;
   padding: 1.5rem;
 }
