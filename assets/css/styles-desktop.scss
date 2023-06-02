@@ -7,7 +7,9 @@ nav {
   grid-template-columns: auto 1fr;
   grid-template-rows: auto;
   grid-template-areas: 
-    "brand links"
+    "brand links";
+  
+  padding: 0;
 }
 
 nav > .nav-toggle {
@@ -20,6 +22,18 @@ nav > ul.nav-links {
   gap: 1.5rem;
   
   padding-left: 0;
-  
   height: initial;
+  
+  background-color: initial;
+}
+
+// !*! Content styles
+// ==================
+
+
+section.ccard.card-left {
+  flex-direction: row-reverse;
+}
+section.ccard.card-right {
+  flex-direction: row;
 }

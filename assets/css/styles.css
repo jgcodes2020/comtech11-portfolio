@@ -1,2 +1,2 @@
-@import url("styles-base.css");
-@import url("styles-desktop.css") screen and (min-width: 768px);
+@import url("/assets/css/styles-base.css");
+@import url("/assets/css/styles-desktop.css") screen and (min-width: 768px);

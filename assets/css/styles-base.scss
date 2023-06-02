@@ -3,19 +3,27 @@
 // Colours/fonts
 :root {
   --base-font: Arial, Helvetica, sans-serif;
-  // THESE ARE TEMPORARY!!
+  
+  --base-bg: white;
+  --base-bg2: gainsboro;
+  --base-fg: black;
+  
   --nav-bg: powderblue;
+  --nav-bg2: skyblue;
   --nav-fg: black;
   --nav-fg2: slategray;
   
-  --nav-btn-base: turquoise;
-  --nav-btn-checked: mediumturquoise;
-  --nav-btn-press: darkturquoise;
+  --nav-acc-light: turquoise;
+  --nav-acc-mid: mediumturquoise;
+  --nav-acc-dark: darkturquoise;
 }
 body {
   font-family: var(--base-font);
   box-sizing: border-box;
   margin: 0;
+  
+  background-color: var(--base-bg2);
+  color: var(--base-fg);
 }
 
 // ====================
@@ -28,7 +36,7 @@ nav {
   grid-template-areas: 
     "brand menu"
     "links links";
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.5rem 0 0 0;
   
   background-color: var(--nav-bg);
   color: var(--nav-fg);
@@ -56,13 +64,13 @@ nav > label.nav-toggle {
   height: fit-content;
   width: fit-content;
   
-  background-color: var(--nav-btn-base);
+  background-color: var(--nav-acc-light);
 }
 nav > input:checked + label.nav-toggle {
-  background-color: var(--nav-btn-checked);
+  background-color: var(--nav-acc-mid);
 }
 nav > label.nav-toggle:active {
-  background-color: var(--nav-btn-press);
+  background-color: var(--nav-acc-dark);
 }
 
 // Primary navbar link styles
@@ -78,9 +86,12 @@ nav > ul.nav-links {
   // common transition properties
   overflow: hidden;
   height: 0;
-  transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
   
-  
+  background-color: var(--nav-bg2);
+}
+nav > input:checked ~ ul.nav-links {
+  height: calc(var(--data-nav-scrollheight) + 1rem);
 }
 nav > ul.nav-links > li {
   height: 2rem;
@@ -114,6 +125,42 @@ nav > ul.nav-links a.nav-current {
 // ====================
 
 main {
-  color: navy;
   padding: 1.5rem;
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
+  
+  background-color: var(--base-bg);
+}
+main > h1 {
+  text-align: center;
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+}
+
+section.ccard {
+  display: flex;
+  flex-direction: column;
+}
+
+section.ccard > * {
+  order: 2;
+  flex-grow: 1;
+  flex-basis: 0;
+  
+  padding: 0.5rem;
+}
+section.ccard > .content {
+  order: 1;
+  flex-grow: 1;
+}
+
+.ctr-container {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
