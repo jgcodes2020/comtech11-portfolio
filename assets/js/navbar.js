@@ -11,11 +11,14 @@ let links = $("nav > ul.nav-links")
 // });
 
 // whenever the window is resized, it switches between mobile and desktop navbars.
-// $(window).resize(event => {
-//   if (window.matchMedia("screen and (min-width: 768px)").matches) {
-//     links.css("max-height", "initial");
-//     check.prop("checked", false);
-//   }
-// });
+$(window).resize(event => {
+  if (window.matchMedia("screen and (min-width: 768px)").matches) {
+    check.prop("checked", false);
+  }
+  
+  links.css("--data-nav-scrollheight", `${links.prop("scrollHeight")}px`);
+});
 
-links.css("--data-nav-scrollheight", `${links.prop("scrollHeight")}px`)
+$(() => {
+  links.css("--data-nav-scrollheight", `${links.prop("scrollHeight")}px`);
+})

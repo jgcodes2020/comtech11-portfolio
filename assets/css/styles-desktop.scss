@@ -12,7 +12,7 @@ nav {
   padding: 0;
 }
 
-nav > .nav-toggle {
+nav > :is(input, label).nav-toggle {
   display: none;
 }
 
@@ -21,7 +21,7 @@ nav > ul.nav-links {
   align-items: center;
   gap: 1.5rem;
   
-  padding-left: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
   height: initial;
   
   background-color: initial;
@@ -29,11 +29,15 @@ nav > ul.nav-links {
 
 // !*! Content styles
 // ==================
-
-
+section.ccard {
+  max-height: 30rem;
+}
 section.ccard.card-left {
   flex-direction: row-reverse;
 }
 section.ccard.card-right {
   flex-direction: row;
+}
+.desktop-4x3 {
+  --bs-aspect-ratio: 75%;
 }
