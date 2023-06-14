@@ -40,6 +40,6 @@ section.ccard.card-left {
 section.ccard.card-right {
   flex-direction: row;
 }
-.desktop-4x3 {
-  --bs-aspect-ratio: 75%;
+.desktop-height-cap {
+  max-height: var(--data-max-height);
 }
