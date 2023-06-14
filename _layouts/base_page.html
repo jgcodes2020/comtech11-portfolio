@@ -18,6 +18,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <!--Fonts (Inter)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <!--own CSS-->
   <link rel="stylesheet" href="assets/css/styles.css">
   <!--own JS-->
@@ -43,13 +48,14 @@
     <ul class="nav-links">
       <!-- Actual links -->
       {% for i in site.data.nav %}
-      <li><a href="{{i.link}}" class="{% if page.url == i.link %}nav-current{% endif %}">{{i.name}}</a></li>
+      {% assign link_url = page.url | prepend: "." %}
+      <li><a href="{{i.link}}" class="{% if link_url == i.link %}nav-current{% endif %}">{{i.name}}</a></li>
       {% endfor %}
     </ul>
   </nav>
   <main>{{ content }}</main>
   <footer>
-    
+
   </footer>
 </body>
 

@@ -31,6 +31,8 @@ nav > ul.nav-links {
 // ==================
 section.ccard {
   max-height: 30rem;
+  
+  gap: 2rem;
 }
 section.ccard.card-left {
   flex-direction: row-reverse;

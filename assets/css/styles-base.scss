@@ -2,7 +2,7 @@
 ---
 // Colours/fonts
 :root {
-  --base-font: Arial, Helvetica, sans-serif;
+  --base-font: Inter, Arial, Helvetica, sans-serif;
   
   --base-bg: rgb(228, 250, 253);
   --base-bg2: powderblue;
@@ -173,9 +173,6 @@ section.ccard > * {
   order: 2;
   flex-grow: 1;
   flex-basis: 0;
-  
-  
-  padding: 0.5rem;
 }
 section.ccard > .content {
   order: 1;
