@@ -147,7 +147,21 @@ nav > ul.nav-links a.nav-current {
 // !*! Footer styles
 // ====================
 footer {
-  background-color: var(--base-bg2);
+  background-color: var(--nav-bg);
+}
+ul.sitemap {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0;
+  justify-content: center;
+  
+  list-style: none;
+  padding: 0.5rem;
+}
+ul.sitemap > li > a {
+  color: var(--nav-fg);
+  font-size: 0.75rem;
 }
 
 // ====================
@@ -171,6 +185,10 @@ img {
   object-fit: fill;
 }
 
+.content > p {
+  text-indent: 4ex;
+}
+
 section.ccard {
   display: flex;
   flex-direction: column;
@@ -185,7 +203,6 @@ section.ccard > .content {
   order: 1;
   flex-grow: 1;
 }
-
 
 
 // ====================
@@ -204,4 +221,16 @@ section.ccard > .content {
   display: block;
   margin: 0 auto;
   max-height: 6rem;
+}
+
+.bullet-emoji > li {
+  padding-left: 1rem;
+}
+.bullet-check {
+  list-style-type: "\2705";
+  padding-left: 4ex;
+}
+.bullet-cross {
+  list-style-type: "\274E";
+  padding-left: 4ex;
 }

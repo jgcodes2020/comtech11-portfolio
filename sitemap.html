@@ -1,0 +1,10 @@
+---
+layout: base_page
+title: "CommTech 11: Sitemap"
+header_text: "Sitemap"
+---
+<ul>
+  {% for i in site.data.nav %}
+  <li><a href="{{i.link}}">{{i.name}}</a></li>
+  {% endfor %}
+</ul>
