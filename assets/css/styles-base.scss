@@ -3,9 +3,12 @@
 // Colours/fonts
 :root {
   --base-font: Inter, Arial, Helvetica, sans-serif;
+  // I might add an option to turn this on (for the funnies!)
+  // --base-font: "Comic Sans MS", "Comic Sans", Arial, Helvetica, sans-serif;
   
   --base-bg: rgb(228, 250, 253);
   --base-bg2: powderblue;
+  --base-bg3: rgb(76, 129, 136);
   --base-fg: black;
   
   --nav-bg: powderblue;
@@ -64,6 +67,7 @@ nav > .brand {
   flex-direction: row;
   align-items: center;
   height: fit-content;
+  margin-left: 2rem;
   
   font-size: 2.5rem;
   font-weight: 800;
