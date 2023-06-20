@@ -1,0 +1,61 @@
+<!--Bootstrap navbar. Links are generated from _data/nav.yaml.-->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img
+      class="rounded-circle"
+      src="{% link assets/imgs/Profile.jpg %}"
+      width="30"
+      alt="Profile">
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbar-content"
+    aria-controls="navbar-content"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar-content">
+    <ul class="navbar-nav">
+      {% for i in site.data.nav %}
+        {% assign link_url = page.url | remove: '.html' %}
+          {% if i.subpages != null %}
+          <!--
+          Thanks, random GitHub comment!
+          https://github.com/twbs/bootstrap/issues/26740#issuecomment-1159784551
+          -->
+          <li class="nav-item">
+            <div class="btn-group d-table nav-link w-100">
+              <a href="{{ i.link | relative_url }}" class="nav-link float-left pt-0 mr-1 mr-0-md">
+                {{ i.name }}
+              </a>
+              <a
+                href="#"
+                class="nav-link dropdown-toggle dropdown-toggle-split w-100 pt-0"
+                data-toggle="dropdown"
+                aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </a>
+              <ul class="dropdown-menu">
+                {% for j in i.subpages %}
+                  <li>
+                    <a href="{{ i.link | append: j.link | relative_url }}" class="dropdown-item">{{ j.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a href="{{ i.link | relative_url }}" class="nav-link {% if link_url == i.link %}active{% endif %}">
+              {{ i.name }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
