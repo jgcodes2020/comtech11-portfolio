@@ -6,5 +6,8 @@
     "*.js.liquid": "liquid-javascript",
     "*.css.liquid": "liquid-css",
     "*.scss.liquid": "liquid-scss"
+  },
+  "material-icon-theme.files.associations": {
+    "*.liquid": "html"
   }
 }

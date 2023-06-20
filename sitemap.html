@@ -3,8 +3,20 @@ layout: base_page
 title: "CommTech 11: Sitemap"
 header_text: "Sitemap"
 ---
+<!--Autogenerates the sitemap from _data/nav.yaml-->
 <ul>
   {% for i in site.data.nav %}
-  <li><a href="{{i.link | relative_url}}">{{i.name}}</a></li>
+    <li>
+      <a href="{{ i.link | relative_url }}">{{ i.name }}</a>
+      {% if i.subpages != null %}
+        <ul>
+          {% for j in i.subpages %}
+            <li>
+              <a href="{{ i.link | append: j.link | relative_url }}">{{ j.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
   {% endfor %}
 </ul>
