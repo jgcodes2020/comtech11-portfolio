@@ -1,0 +1,137 @@
+$theme-colors: (
+  "light": rgb(176, 224, 230),
+  "dark": rgb(0, 0, 0)
+);
+
+$font-family-sans-serif: Inter, Arial, Helvetica, sans-serif;
+$body-bg: rgb(228, 250, 253);
+
+@import "bootstrap/bootstrap";
+
+@debug "body BG: #{$body-bg}";
+
+// Colours/fonts
+:root {
+  --base-font: Inter, Arial, Helvetica, sans-serif;
+  // I might add an option to turn this on (for the funnies!)
+  // --base-font: "Comic Sans MS", "Comic Sans", Arial, Helvetica, sans-serif;
+  
+  // --base-bg: rgb(228, 250, 253);
+  // --base-bg2: powderblue;
+  // --base-bg3: rgb(76, 129, 136);
+  // --base-fg: black;
+  
+  // --nav-bg: powderblue;
+  // --nav-bg2: rgb(158, 206, 212);
+  // --nav-fg: black;
+  // --nav-fg2: rgb(62, 71, 80);
+  
+  // --nav-acc-light: turquoise;
+  // --nav-acc-mid: mediumturquoise;
+  // --nav-acc-dark: darkturquoise;
+}
+// ====================
+// !*! Header styles
+// ====================
+.page-header-text {
+  text-align: center;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+// ====================
+// !*! Footer styles
+// ====================
+footer {
+  background-color: var(--nav-bg);
+}
+ul.sitemap {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0;
+  justify-content: center;
+  
+  list-style: none;
+  padding: 0.5rem;
+}
+ul.sitemap > li > a {
+  color: var(--nav-fg);
+  font-size: 0.75rem;
+}
+
+// ====================
+// !*! Content styles
+// ====================
+
+main {
+  padding: 1.5rem;
+  max-width: 992px;
+  margin: 0 auto;
+  
+  background-color: var(--base-bg);
+}
+main > h1 {
+  text-align: center;
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+}
+
+.content > p {
+  text-indent: 4ex;
+}
+
+section.ccard {
+  display: flex;
+  flex-direction: column;
+}
+
+section.ccard > * {
+  order: 2;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+section.ccard > .content {
+  order: 1;
+  flex-grow: 1;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+// ====================
+// !*! Utilities
+// ====================
+.ctr-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-overflow {
+  overflow: scroll;
+}
+.big-header {
+  display: block;
+  margin: 0 auto;
+  max-height: 6rem;
+}
+
+.bullet-emoji > li {
+  padding-left: 1rem;
+}
+.bullet-check {
+  list-style-type: "\2705";
+  padding-left: 4ex;
+}
+.bullet-cross {
+  list-style-type: "\274E";
+  padding-left: 4ex;
+}

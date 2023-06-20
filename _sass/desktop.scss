@@ -1,0 +1,40 @@
+nav {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "brand links";
+  
+  padding: 0;
+}
+
+nav > :is(input, label).nav-toggle {
+  display: none;
+}
+
+nav > ul.nav-links {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  height: initial;
+  
+  background-color: initial;
+}
+
+// !*! Content styles
+// ==================
+section.ccard {
+  max-height: 30rem;
+  
+  gap: 2rem;
+}
+section.ccard.card-left {
+  flex-direction: row-reverse;
+}
+section.ccard.card-right {
+  flex-direction: row;
+}
+.desktop-height-cap {
+  max-height: var(--data-max-height) !important;
+}

@@ -5,6 +5,6 @@ header_text: "Sitemap"
 ---
 <ul>
   {% for i in site.data.nav %}
-  <li><a href="{{i.link}}">{{i.name}}</a></li>
+  <li><a href="{{i.link | relative_url}}">{{i.name}}</a></li>
   {% endfor %}
 </ul>

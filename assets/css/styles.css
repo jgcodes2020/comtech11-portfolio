@@ -1,2 +1,5 @@
-@import url("styles-base.css");
-@import url("styles-desktop.css") screen and (min-width: 768px);
+---
+---
+
+@import url("{% link assets/css/styles-base.scss %}");
+@import url("{% link assets/css/styles-desktop.scss %}") screen and (min-width: 768px);
