@@ -29,7 +29,7 @@
           -->
           <li class="nav-item">
             <div class="btn-group d-table nav-link w-100">
-              <a href="{{ i.link | relative_url }}" class="nav-link float-left pt-0 mr-1 mr-0-md">
+              <a href="{{ i.link | relative_url }}" class="nav-link {% if link_url == i.link %}active{% endif %} float-left pt-0 mr-1 mr-0-md">
                 {{ i.name }}
               </a>
               <a
@@ -41,8 +41,9 @@
               </a>
               <ul class="dropdown-menu">
                 {% for j in i.subpages %}
+                  {% assign data_sublink_url = i.link | append: j.link %}
                   <li>
-                    <a href="{{ i.link | append: j.link | relative_url }}" class="dropdown-item">{{ j.name }}</a>
+                    <a href="{{ i.link | append: j.link | relative_url }}" class="dropdown-item {% if link_url == data_sublink_url %}active{% endif %}">{{ j.name }}</a>
                   </li>
                 {% endfor %}
               </ul>

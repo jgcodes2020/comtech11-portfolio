@@ -2,7 +2,7 @@
 - name: Home
   link: "/"
 - name: Things I've Made
-  link: /past.html
+  link: /past
 - name: My Inspirations
   link: /inspiration
 - name: Plans for University
@@ -15,4 +15,4 @@
   - name: Portraits
     link: /portraits
   - name: Film Project
-    link: /poster
+    link: /film

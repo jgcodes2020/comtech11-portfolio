@@ -5,6 +5,8 @@ $theme-colors: (
 
 $font-family-sans-serif: Inter, Arial, Helvetica, sans-serif;
 $body-bg: rgb(228, 250, 253);
+$component-active-bg: rgb(158, 206, 212);
+$component-active-color: black;
 
 @import "bootstrap/bootstrap";
 
@@ -61,6 +63,10 @@ ul.sitemap > li > a {
 // ====================
 // !*! Content styles
 // ====================
+
+.nav-link.active {
+  font-weight: bold;
+}
 
 main {
   padding: 1.5rem;
@@ -137,12 +143,12 @@ bs-icon {
   width: 100%;
   text-align: center;
 }
-.two-col-container {
+.two-col-container, .three-col-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
-.two-col-container > article {
+.two-col-container > article, .three-col-container > article {
   background-color: map-get($theme-colors, "light");
   padding: 1rem;
   border-radius: 0.5rem;
