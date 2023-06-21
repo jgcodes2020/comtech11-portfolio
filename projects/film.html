@@ -3,7 +3,7 @@ layout: base_page
 title: "CommTech 11: Film Project"
 header_text: "Film Project"
 ---
-<a href="{% link projects.html %}" class="btn btn-primary wide-btn-back mb-4" role="button">
+<a href="{{ site.baseurl }}{% link projects.html %}" class="btn btn-primary wide-btn-back mb-4" role="button">
   <i class="bi-chevron-left"></i> Back to all projects
 </a>
 <div class="two-col-container">
@@ -22,7 +22,7 @@ header_text: "Film Project"
   <article>
     <h3 class="big-header">Storyboards</h3>
     <div class="embed-responsive embed-responsive-4by3">
-      <iframe src="{% link assets/pdf/storyboards.pdf %}" frameborder="0" class="embed-responsive-item"></iframe>
+      <iframe src="{{ site.baseurl }}{% link assets/pdf/storyboards.pdf %}" frameborder="0" class="embed-responsive-item"></iframe>
     </div>
   </article>
   <article>
@@ -50,6 +50,6 @@ header_text: "Film Project"
     </div>
   </article>
 </div>
-<a href="{% link projects.html %}" class="btn btn-primary wide-btn-back mt-4" role="button">
+<a href="{{ site.baseurl }}{% link projects.html %}" class="btn btn-primary wide-btn-back mt-4" role="button">
   <i class="bi-chevron-left"></i> Back to all projects
 </a>

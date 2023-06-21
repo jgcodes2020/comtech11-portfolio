@@ -1,3 +1,3 @@
 exclude:
   - README.md
-baseurl: "/comtech11-portfolio/"
+baseurl: /comtech11-portfolio

@@ -1,5 +1,5 @@
 ---
 ---
 
-@import url("{% link assets/css/styles-base.scss %}");
-@import url("{% link assets/css/styles-desktop.scss %}") screen and (min-width: 768px);
+@import url("{{ site.baseurl }}{% link assets/css/styles-base.scss %}");
+@import url("{{ site.baseurl }}{% link assets/css/styles-desktop.scss %}") screen and (min-width: 768px);

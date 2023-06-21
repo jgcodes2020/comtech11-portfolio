@@ -3,7 +3,7 @@ layout: base_page
 title: "CommTech 11: Poster Project"
 header_text: "Poster Project"
 ---
-<a href="{% link projects.html %}" class="btn btn-primary wide-btn-back mb-4" role="button">
+<a href="{{ site.baseurl }}{% link projects.html %}" class="btn btn-primary wide-btn-back mb-4" role="button">
   <i class="bi-chevron-left"></i> Back to all projects
 </a>
 <div class="two-col-container">
@@ -31,14 +31,14 @@ header_text: "Poster Project"
   <article>
     <h3 class="big-header">Sketches</h3>
     <div class="embed-responsive embed-responsive-4by3">
-      <iframe src="{% link assets/pdf/poster-sketches.pdf %}" frameborder="0" class="embed-responsive-item"></iframe>
+      <iframe src="{{ site.baseurl }}{% link assets/pdf/poster-sketches.pdf %}" frameborder="0" class="embed-responsive-item"></iframe>
     </div>
   </article>
   <article class="grid-span-2">
     <h3 class="big-header">Final Product</h3>
     <div class="embed-responsive embed-responsive-4by3">
       <div class="scroll-box embed-responsive-item">
-        <img src="{% link assets/imgs/poster/final-poster.png %}">
+        <img src="{{ site.baseurl }}{% link assets/imgs/poster/final-poster.png %}">
       </div>
     </div>
   </article>
@@ -55,6 +55,6 @@ header_text: "Poster Project"
     </div>
   </article>
 </div>
-<a href="{% link projects.html %}" class="btn btn-primary wide-btn-back mt-4" role="button">
+<a href="{{ site.baseurl }}{% link projects.html %}" class="btn btn-primary wide-btn-back mt-4" role="button">
   <i class="bi-chevron-left"></i> Back to all projects
 </a>
