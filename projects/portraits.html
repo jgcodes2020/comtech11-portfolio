@@ -3,3 +3,49 @@ layout: base_page
 title: "CommTech 11: Portrait Project"
 header_text: "Portrait Project"
 ---
+<a href="{% link projects.html %}" class="btn btn-primary wide-btn-back mb-4" role="button">
+  <i class="bi-chevron-left"></i> Back to all projects
+</a>
+<div class="two-col-container">
+  <article>
+    <h3 class="big-header">Planning</h3>
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe class="embed-responsive-item" src="https://docs.google.com/document/d/e/2PACX-1vTKFkmOyf33V9kWoGW8hIFeQnOlKnphkoaRD5E5z1MfSKWNd3jZ3-TqpF90cJYQGTMtsrxSPojn_Hhy/pub?embedded=true"></iframe>
+    </div>
+  </article>
+  <article>
+    <h3 class="big-header">Sketches</h3>
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe src="{% link assets/pdf/portrait-sketches.pdf %}" frameborder="0" class="embed-responsive-item"></iframe>
+    </div>
+  </article>
+  <article class="grid-span-2">
+    <h3 class="big-header">Contact Sheet</h3>
+    <div class="embed-responsive embed-responsive-4by3">
+      <img src="{% link assets/imgs/portraits/ContactSheet-001.jpg %}" alt="Contact sheet of 30 photos" class="embed-responsive-item">
+    </div>
+  </article>
+  <article class="grid-span-2">
+    <h3 class="big-header">Final Photos</h3>
+    <div class="embed-responsive embed-responsive-4by3">
+      <div class="embed-responsive-item">
+        {% include img-gallery.liquid id="portrait-gallery" name="photos-all" %}
+      </div>
+    </div>
+  </article>
+  <article>
+    <h3 class="big-header">Rationale</h3>
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe class="embed-responsive-item" src="https://docs.google.com/document/d/e/2PACX-1vRzqKs_icCZtBxDB7ks2AE5PJpqM6yAiu5UmGzeLhf6hzcH2YJ60N9ES7-vVeseFI5B9NQ76k4jbkdq/pub?embedded=true"></iframe>
+    </div>
+  </article>
+  <article>
+    <h3 class="big-header">Self-Evaluation</h3>
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe class="embed-responsive-item" src="https://docs.google.com/document/d/e/2PACX-1vTkjSfEmeykA30IDBfe_wTYInhFMmzBaCedd-RG1KY3U_3yBPiV1rSlM0hvqVCmXOIkZJVXKND9Fwuo/pub?embedded=true"></iframe>
+    </div>
+  </article>
+</div>
+<a href="{% link projects.html %}" class="btn btn-primary wide-btn-back mt-4" role="button">
+  <i class="bi-chevron-left"></i> Back to all projects
+</a>

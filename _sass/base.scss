@@ -8,8 +8,6 @@ $body-bg: rgb(228, 250, 253);
 
 @import "bootstrap/bootstrap";
 
-@debug "body BG: #{$body-bg}";
-
 // Colours/fonts
 :root {
   --base-font: Inter, Arial, Helvetica, sans-serif;
@@ -122,13 +120,35 @@ bs-icon {
   justify-content: center;
   align-items: center;
 }
-.scroll-overflow {
+.scroll-box {
   overflow: scroll;
+}
+.scroll-box > * {
+  max-width: 100%;
+  max-height: 5000%;
 }
 .big-header {
   display: block;
-  margin: 0 auto;
+  margin: 0.5rem auto 1.5rem;
   max-height: 6rem;
+}
+.wide-btn-back {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.two-col-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+.two-col-container > article {
+  background-color: map-get($theme-colors, "light");
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.grid-span-2 {
+  grid-column: 1 / -1;
 }
 
 .bullet-emoji > li {

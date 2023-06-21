@@ -38,3 +38,7 @@ section.ccard.card-right {
 .desktop-height-cap {
   max-height: var(--data-max-height) !important;
 }
+
+.two-col-container {
+  grid-template-columns: repeat(2, 1fr);
+}

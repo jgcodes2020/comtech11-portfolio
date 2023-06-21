@@ -1,0 +1,28 @@
+# A list of named galleries that can be created using
+# the img-gallery template.
+photos-all:
+  - src: assets/imgs/portraits/PBW-Photoshoot.jpg
+    alt: Two guys setting up for a photo
+  - src: assets/imgs/portraits/PBW-Robotics.jpg
+    alt: A gal drilling into a piece of plastic (for robotics)
+  - src: assets/imgs/portraits/TBW-Crying.jpg
+    alt: Closeup of a guy's face with a Photoshopped tear running down his face
+  - src: assets/imgs/portraits/TBW-Door.jpg
+    alt: Wide shot of a guy hunched over in anguish, sitting at a door
+  - src: assets/imgs/portraits/ENV-Bags.jpg
+    alt: A guy laying in a pile of schoolbags
+  - src: assets/imgs/portraits/ENV-Cafeteria.jpg
+    alt: A guy hunched over in frustration in front of his laptop, with several people in the background
+  - src: assets/imgs/portraits/UP-Eye.jpg
+    alt: A person's eye, framed by a Photoshopped ring light
+  - src: assets/imgs/portraits/UP-Chair.jpg
+    alt: A guy standing in front of a row of lockers, framed by the hole in a school chair
+  - src: assets/imgs/portraits/FGI-Cafeteria.jpg
+    alt: A guy leaning against a tree with a busy cafeteria in the background
+  - src: assets/imgs/portraits/FGI-Gazing.jpg
+    alt: A guy standing in a field, staring off to the plaza across the street from him
+  - src: assets/imgs/portraits/SP-Jacky.jpg
+    alt: Jacky Guo (me) gazing slightly upwards under a strong warm light
+  - src: assets/imgs/portraits/SP-Bagavan.jpg
+    alt: Bagavan Marakathalingasivam (my partner) in a thinking pose
+  

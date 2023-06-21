@@ -1,1 +1,0 @@
-const carousel = new bootstrap.Carousel("#photoshop-carousel")
